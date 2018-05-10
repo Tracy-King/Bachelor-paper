@@ -1,0 +1,734 @@
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "Gerry Murray",
+%%%     version         = "1.2",
+%%%     date            = "2 April 2012",
+%%%     filename        = "acmsmall-sample-bibfile.bib",
+%%%     address         = "ACM, NY",
+%%%     email           = "murray at hq.acm.org",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "ACM Reference Format, bibliography, citation, references",
+%%%     supported       = "yes",
+%%%     docstring       = "This BibTeX database file contains 'bibdata' entries
+%%%                        that 'match' the examples provided in the Specifications Document
+%%%                        AND, also, 'legacy'-type bibs. It should assist authors in 
+%%%                        choosing the 'correct' at-bibtype and necessary bib-fields
+%%%                        so as to obtain the appropriate ACM Reference Format output. 
+%%%			   It also contains many 'Standard Abbreviations'. "
+%%%  }
+%%% ====================================================================
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkha{\"u}ser" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+%Entries
+
+@inproceedings{Jindal:2008,
+author = {Jindal, Nitin and Liu, Bing},
+title = {Opinion Spam and Analysis},
+booktitle = {Proceedings of the 2008 International Conference on Web Search and Data Mining},
+address = {New York, NY, USA},
+series = {WSDM '08},
+pages = {219--230},
+year = {2008}
+} 
+
+
+
+
+@inproceedings{Chino:2017,
+author = {Daniel Y. T. Chino and Alceu F. Costa and Agma J. M. Traina and Christos Faloutsos},
+title = {VolTime: Unsupervised Anomaly Detection on Users' Online Activity Volume},
+booktitle = {Proceedings of the 2017 SIAM International Conference on Data Mining},
+pages = {108-116},
+year = {2017}
+}
+
+
+@Inproceedings{Agrawal:2016,
+author= {Agrawal, Mohit and Leela Velusamy, R.},
+title={Unsupervised Spam Detection in Hyves Using SALSA},
+booktitle={Proceedings of the 4th International Conference on Frontiers in Intelligent Computing: Theory and Applications (FICTA) 2015},
+address={New Delhi},
+pages={517--526},
+year={2016}
+}
+
+
+@inproceedings{Chen:2017,
+author = {Chen, Hao and He, Daojing and Zhu, Sencun and Yang, Jingshun},
+title = {Toward Detecting Collusive Ranking Manipulation Attackers in Mobile App Markets},
+booktitle = {Proceedings of the 2017 ACM on Asia Conference on Computer and Communications Security},
+series = {ASIA CCS '17},
+year = {2017},
+pages = {58--70},
+address = {New York, NY, USA}
+}
+
+
+
+@inproceedings{Spirin:2012,
+author = {Spirin, Nikita and Han, Jiawei},
+title = {Survey on Web Spam Detection: Principles and Algorithms},
+booktitle = {SIGKDD Explor. Newsl.},
+address = {New York, NY, USA},
+volume = {13},
+number = {2},
+pages = {50--64},
+year = {2012},
+}
+
+
+
+
+@inproceedings{Crawford:2015,
+author={Crawford, Michael
+and Khoshgoftaar, Taghi M.
+and Prusa, Joseph D.
+and Richter, Aaron N.
+and Al Najada, Hamzah},
+title={Survey of review spam detection using machine learning techniques},
+booktitle={Journal of Big Data},
+volume={2},
+number={1},
+pages={23},
+year={2015}
+}
+
+
+
+
+@INPROCEEDINGS{Li:2014, 
+author={H. Li and Z. Chen and B. Liu and X. Wei and J. Shao}, 
+booktitle={2014 IEEE International Conference on Data Mining}, 
+title={Spotting Fake Reviews via Collective Positive-Unlabeled Learning}, 
+pages={899-904}, 
+year={2014}
+}
+
+
+
+@inproceedings{Mukherjee:2012,
+author = {Mukherjee, Arjun and Liu, Bing and Glance, Natalie},
+title = {Spotting Fake Reviewer Groups in Consumer Reviews},
+booktitle = {Proceedings of the 21st International Conference on World Wide Web},
+series = {WWW '12},
+pages = {191--200},
+numpages = {10},
+publisher = {ACM},
+address = {New York, NY, USA},
+year = {2012}
+} 
+
+
+
+
+@inproceedings{Sedhai:2017,
+author    = {Surendra Sedhai and
+               Aixin Sun},
+title     = {Semi-Supervised Spam Detection in Twitter Stream},
+booktitle = {CoRR},
+volume    = {abs/1702.01032},
+year      = {2017},
+}
+
+
+
+@inproceedings{Santosh:2016,
+ author = {KC, Santosh and Mukherjee, Arjun},
+ title = {On the Temporal Dynamics of Opinion Spamming: Case Studies on Yelp},
+ booktitle = {Proceedings of the 25th International Conference on World Wide Web},
+ series = {WWW '16},
+ address = {Republic and Canton of Geneva, Switzerland},
+ pages = {369--379},
+ numpages = {11},
+ year = {2016},
+} 
+
+
+
+
+
+@inproceedings{Hooi:2016,
+ author = {Hooi, Bryan and Song, Hyun Ah and Beutel, Alex and Shah, Neil and Shin, Kijung and Faloutsos, Christos},
+ title = {FRAUDAR: Bounding Graph Fraud in the Face of Camouflage},
+ booktitle = {Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+ series = {KDD '16},
+ address = {New York, NY, USA},
+ pages = {895--904},
+ year = {2016}
+} 
+
+
+
+
+
+@inproceedings{HEYDARI:2015,
+author = {Atefeh Heydari and Mohammad ali Tavakoli and Naomie Salim and Zahra Heydari},
+title = {Detection of review spam: A survey},
+booktitle = {Expert Systems with Applications},
+volume = {42},
+number = {7},
+pages = {3634 - 3642},
+year = {2015}
+}
+
+
+
+
+
+@inproceedings{Costa:2013,
+ author = {Costa, Helen and Benevenuto, Fabricio and Merschmann, Luiz H. C.},
+ title = {Detecting Tip Spam in Location-based Social Networks},
+ booktitle = {Proceedings of the 28th Annual ACM Symposium on Applied Computing},
+ series = {SAC '13},
+ address = {New York, NY, USA}, 
+ pages = {724--729},
+ year = {2013},
+} 
+
+
+
+
+
+@inproceedings{Li:2017,
+ author = {Li, Huayi and Fei, Geli and Wang, Shuai and Liu, Bing and Shao, Weixiang and Mukherjee, Arjun and Shao, Jidong},
+ title = {Bimodal Distribution and Co-Bursting in Review Spam Detection},
+ booktitle = {Proceedings of the 26th International Conference on World Wide Web},
+ series = {WWW '17},
+ address = {Republic and Canton of Geneva, Switzerland},
+ pages = {1063--1072},
+ year = {2017},
+}
+
+
+
+
+
+@INPROCEEDINGS{Chen:2013, 
+author={C. Chen and K. Wu and V. Srinivasan and X. Zhang}, 
+title={Battling the Internet water army: Detection of hidden paid posters}, 
+booktitle={2013 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM 2013)}, 
+pages={116-120}, 
+year={2013},
+}
+
+
+
+@INPROCEEDINGS{Heredia:2016, 
+author={B. Heredia and T. M. Khoshgoftaar and J. Prusa and M. Crawford}, 
+title={An Investigation of Ensemble Techniques for Detection of Spam Reviews}, 
+booktitle={2016 15th IEEE International Conference on Machine Learning and Applications (ICMLA)}, 
+pages={127-133}, 
+year={2016}
+}
+
+
+
+
+@inproceedings{WASHHA:2017,
+author = {Mahdi Washha and Aziz Qaroush and Manel Mezghani and Florence Sedes},
+title = {A Topic-Based Hidden Markov Model for Real-Time Spam Tweets Filtering},
+booktitle = {Procedia Computer Science},
+volume = {112},
+pages = {833 - 843},
+year = {2017},
+}
+
+
+
+@INPROCEEDINGS{Kumar:2016, 
+author={S. Kumar and X. Gao and I. Welch and M. Mansoori}, 
+title={A Machine Learning Based Web Spam Filtering Approach}, 
+booktitle={2016 IEEE 30th International Conference on Advanced Information Networking and Applications (AINA)}, 
+pages={973-980}, 
+year={2016},
+}
+
+
+
+
+@Inproceedings{Bosma:2012,
+author={Bosma, Maarten and Meij, Edgar and Weerkamp, Wouter},
+title={A Framework for Unsupervised Spam Detection in Social Networking Sites},
+booktitle={Advances in Information Retrieval: 34th European Conference on IR Research, ECIR 2012, Proceedings},
+address={Berlin, Heidelberg},
+pages={364--375},
+year={2012},
+}
+
+
+
+
+@INPROCEEDINGS{Prusa:2015, 
+author={J. Prusa and T. M. Khoshgoftaar and D. J. Dittman}, 
+title={Using Ensemble Learners to Improve Classifier Performance on Tweet Sentiment Data}, 
+booktitle={2015 IEEE International Conference on Information Reuse and Integration},  
+pages={252-257}, 
+year={2015}, }
+
+
+
+
+@INPROCEEDINGS{Shojaee:2013, 
+author={S. Shojaee and M. A. A. Murad and A. B. Azman and N. M. Sharef and S. Nadali}, 
+title={Detecting deceptive reviews using lexical and syntactic features}, 
+booktitle={2013 13th International Conference on Intellient Systems Design and Applications}, 
+pages={53-58}, 
+year={2013}, }
+
+
+@inproceedings{Castillo:2007,
+ author = {Castillo, Carlos and Donato, Debora and Gionis, Aristides and Murdock, Vanessa and Silvestri, Fabrizio},
+ title = {Know Your Neighbors: Web Spam Detection Using the Web Topology},
+ booktitle = {Proceedings of the 30th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval},
+ series = {SIGIR '07},
+ address = {New York, NY, USA},
+ pages = {423--430},
+ year = {2007},
+} 
+
+
+
+@inproceedings{Chirita:2005,
+ author = {Chirita, Paul-Alexandru and Diederich, J\"{o}rg and Nejdl, Wolfgang},
+ title = {MailRank: Using Ranking for Spam Detection},
+ booktitle = {Proceedings of the 14th ACM International Conference on Information and Knowledge Management},
+ series = {CIKM '05},
+ address = {New York, NY, USA},
+ pages = {373--380},
+ year = {2005},
+} 
+
+
+
+
+
+@inproceedings{Rabiner:1989, 
+author={L. R. Rabiner}, 
+title={A tutorial on hidden Markov models and selected applications in speech recognition}, 
+booktitle={Proceedings of the IEEE}, 
+volume={77}, 
+number={2}, 
+pages={257-286}, 
+year={1989}, }
+
+
+
+
+@inproceedings{Malmgren:2009,
+ author = {Malmgren, R. Dean and Hofman, Jake M. and Amaral, Luis A.N. and Watts, Duncan J.},
+ title = {Characterizing Individual Communication Patterns},
+ booktitle = {Proceedings of the 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+ series = {KDD '09},
+ address = {New York, NY, USA},
+ pages = {607--616},
+ year = {2009},
+ } 
+
+
+@Inproceedings{Freund:1995,
+author={Freund, Yoav and Schapire, Robert E.},
+title={A desicion-theoretic generalization of on-line learning and an application to boosting},
+booktitle="{Computational Learning Theory: Second European Conference, EuroCOLT '95 Barcelona, Proceedings}",
+address={Berlin, Heidelberg},
+pages={23--37},
+year={1995}
+}
+
+
+
+
+@inproceedings{CHEN:2009,
+author = {Jingnian Chen and Houkuan Huang and Shengfeng Tian and Youli Qu},
+title = {Feature selection for text classification with Naive Bayes},
+booktitle = {Expert Systems with Applications},
+volume = {36},
+pages = {5432 - 5435},
+year = {2009},
+}
+
+
+
+@inproceedings{Mukherjee:2013,
+title = {What yelp fake review filter might be doing?},
+author = {Arjun Mukherjee and Vivek Venkataraman and Bing Liu and Natalie Glance},
+pages = {409--418},
+booktitle = {Proceedings of the 7th International Conference on Weblogs and Social Media, ICWSM 2013},
+year = {2013},
+}
+
+
+
+
+@inproceedings{Ott:2011,
+ author = {Ott, Myle and Choi, Yejin and Cardie, Claire and Hancock, Jeffrey T.},
+ title = {Finding Deceptive Opinion Spam by Any Stretch of the Imagination},
+ booktitle = {Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies - Volume 1},
+ series = {HLT '11},
+ address = {Stroudsburg, PA, USA},
+ pages = {309--319},
+ numpages = {11},
+ year = {2011},
+} 
+
+
+
+
+@inproceedings{Rayana:2015,
+ author = {Rayana, Shebuti and Akoglu, Leman},
+ title = {Collective Opinion Spam Detection: Bridging Review Networks and Metadata},
+ booktitle = {Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+ series = {KDD '15},
+ address = {New York, NY, USA},
+ pages = {985--994}, 
+ year = {2015},
+} 
+
+
+
+
+@inproceedings{Rayana:2016,
+author = {Shebuti Rayana and Leman Akoglu},
+title = {Collective Opinion Spam Detection using Active Inference},
+booktitle = {Proceedings of the 2016 SIAM International Conference on Data Mining},
+pages = {630-638},
+year = {2016},
+}
+
+
+
+
+@inproceedings{Luca:2016,
+author = {Michael Luca and Georgios Zervas},
+title = {Fake It Till You Make It: Reputation, Competition, and Yelp Review Fraud},
+booktitle = {Management Science},
+volume = {62},
+pages = {3412-3427},
+year = {2016},
+}
+
+
+
+
+@inproceedings{Forney:1973, 
+author={G. D. Forney}, 
+title={The viterbi algorithm}, 
+booktitle={Proceedings of the IEEE}, 
+volume={61}, 
+number={3}, 
+pages={268-278}, 
+year={1973}, }
+
+
+
+@INPROCEEDINGS{Yao:2017, 
+author={W. Yao and N. Ruan and F. Yu and W. Jia and H. Zhu}, 
+booktitle={2017 14th Annual IEEE International Conference on Sensing, Communication, and Networking (SECON)}, 
+title={Privacy-Preserving Fraud Detection via Cooperative Mobile Carriers with Improved Accuracy}, 
+year={2017}, 
+pages={1-9}, 
+month={June},}
+
+
+
+@INPROCEEDINGS{CHAKRABORTY:2016,
+title = {Recent developments in social spam detection and combating techniques: A survey},
+booktitle = {Information Processing \& Management},
+volume = {52},
+number = {6},
+pages = {1053 - 1073},
+year = {2016},
+author = {Manajit Chakraborty and Sukomal Pal and Rahul Pramanik and C. Ravindranath Chowdary},
+}
+
+
+
+@INPROCEEDINGS{Wei:2014, 
+author={C. Wei Phang and C. H. Tan and J. Sutanto and F. Magagna and X. Lu}, 
+booktitle={IEEE Transactions on Engineering Management}, 
+title={Leveraging O2O Commerce for Product Promotion: An Empirical Investigation in Mainland China}, 
+year={2014}, 
+volume={61}, 
+number={4}, 
+pages={623-632}, 
+ISSN={0018-9391}, 
+month={Nov},}
+
+
+
+@inproceedings{Gupta:2017,
+author = {Vishal Gupta and Saakshi Saakshi Kapoor and Rohit Kumar},
+title = {A REVIEW OF ATTACKS AND ITS DETECTION ATTRIBUTES ON COLLABORATIVE RECOMMENDER SYSTEMS},
+booktitle = {International Journal of Advanced Research in Computer Science},
+volume = {8},
+number = {7},
+year = {2017},
+}
+
+
+@inproceedings{Zhou:2016,
+author = {Z. H. Zhou},
+title = {Machine Learning},
+year = {2016},
+publisher = {Tsinghua University Press},
+isbn = {978-7-302-42328-7},
+chapter = {8},
+pages = {174},
+}
+
+
+@inproceedings{Nilizadeh:2017,
+ author = {Nilizadeh, Shirin and Labr\`{e}che, Francois and Sedighian, Alireza and Zand, Ali and Fernandez, Jos{\'e} and Kruegel, Christopher and Stringhini, Gianluca and Vigna, Giovanni},
+ title = {POISED: Spotting Twitter Spam Off the Beaten Paths},
+ booktitle = {Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security},
+ series = {CCS '17},
+ year = {2017},
+ isbn = {978-1-4503-4946-8},
+ location = {Dallas, Texas, USA},
+ pages = {1159--1174},
+ numpages = {16},
+ acmid = {3134055},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {communities of interest, information diffusion, online social networks, parties of interest, spam detection},
+} 
+
+
+@inproceedings{Y.Yao:2017,
+ author = {Yao, Yuanshun and Viswanath, Bimal and Cryan, Jenna and Zheng, Haitao and Zhao, Ben Y.},
+ title = {Automated Crowdturfing Attacks and Defenses in Online Review Systems},
+ booktitle = {Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security},
+ series = {CCS '17},
+ year = {2017},
+ isbn = {978-1-4503-4946-8},
+ location = {Dallas, Texas, USA},
+ pages = {1143--1158},
+ numpages = {16},
+ acmid = {3133990},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {crowdtur ng, fake review, opinion spam, web security},
+}
+
+
+@inbook{Rahman:2014,
+author = {Mahmudur Rahman and Bogdan Carbunar and Jaime Ballesteros and George Burri and Duen Horng (Polo) Chau},
+title = {Turning the Tide: Curbing Deceptive Yelp Behaviors},
+booktitle = {Proceedings of the 2014 SIAM International Conference on Data Mining},
+chapter = {},
+pages = {244-252},
+doi = {10.1137/1.9781611973440.28},
+URL = {https://epubs.siam.org/doi/abs/10.1137/1.9781611973440.28},
+eprint = {https://epubs.siam.org/doi/pdf/10.1137/1.9781611973440.28}
+}
+
+@INPROCEEDINGS{Zhang:2014, 
+author={X. Zhang and H. Zheng and X. Li and S. Du and H. Zhu}, 
+booktitle={2014 IEEE Global Communications Conference}, 
+title={You are where you have been: Sybil detection via geo-location analysis in OSNs}, 
+year={2014}, 
+pages={698-703}, 
+month={Dec},}
+
+@article{Gong:2018,
+  title={DeepScan: Exploiting Deep Learning for Malicious Account Detection in Location-Based Social Networks},
+  author={Gong, Qingyuan and Chen, Yang and He, Xinlei and Zhuang, Zhou and Wang, Tianyi and Huang, Hong and Wang, Xin and Fu, Xiaoming},
+  journal={IEEE Communications Magazine, Feature Topic on Mobile Big Data for Urban Analytics},
+  volume={56},
+  number={1},
+  year={2018}
+}
