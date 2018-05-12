@@ -4,159 +4,72 @@
 %%==================================================
 
 %\bibliographystyle{sjtu2}%[此处用于每章都生产参考文献]
-\chapter{这是什么}
-\label{chap:intro}
+\chapter{提取地理位置特征}
+\label{chap:Featu}
 
-这是上海交通大学(非官方)学位论文 \LaTeX 模板，当前版本是 \version 。
 
-最早的一版学位模板是一位热心的物理系同学制作的。
-那份模板参考了自动化所学位论文模板，使用了CASthesis.cls文档类，中文字符处理则采用当时最为流行的 \CJKLaTeX 方案。
-我根据交大研究生院对学位论文的要求
-\footnote{\url{http://www.gs.sjtu.edu.cn/policy/fileShow.ahtml?id=130}}
-，结合少量个人审美喜好，完成了一份基本可用的交大 \LaTeX 学位论文模板。
-但是，搭建一个 \CJKLaTeX 环境并不简单，单单在Linux下配置环境和添加中文字体，就足够让新手打退堂鼓。
-在William Wang的建议下，我开始着手把模板向 \XeTeX 引擎移植。
-他完成了最初的移植，多亏了他出色的工作，后续的改善工作也得以顺利进行。
 
-随着我对 \LaTeX 系统认知增加，我又断断续续做了一些完善模板的工作，在原有硕士学位论文模板的基础上完成了交大学士和博士学位论文模板。
+\section{选择地理位置特征}
 
-现在，交大学位论文模板SJTUTHesis代码在github
-\footnote{\url{https://github.com/sjtug/SJTUThesis}}
-上维护。
-你可以\href{https://github.com/sjtug/SJTUThesis/issues}{在github上开issue}
-、或者在\href{https://bbs.sjtu.edu.cn/bbsdoc?board=TeX_LaTeX}{水源LaTeX版}发帖来反映遇到的问题。
+O2O平台的用户发布评论的过程可以视为一个随机过程，发布评论的事件是以一个固定的概率稳定并独立发生的。在这个随机过程的。在这个过程下，评论相关的特征会遵循一些特殊的分布。例如著名的泊松过程下，时间间隔变量遵循泊松分布。在寻找帮助解决问题的特征时，研究目标特征遵循的分布特点十分有帮助。关于特征的选择，虽然已经有很多特征证明了它们在水军检测中的重要价值，例如时间、活跃量等，但是地理位置特征却被忽略了。分别计算普通用户和水军用户的地理位置特征的相关统计数据和分布特点，加以分析并寻找它们之间的不同之处，那么地理位置特征就可以成为解决问题的切入点。经过我们的研究调查，我们发现了一个可用的地理位置特征——“半径”：
 
-\section{使用模板}
+\begin{defn}
+	\textbf{半径}：每一个评论中店铺位置点和中心点的距离。其中中心点是一个用户的评论列表中最活跃地区内各个店铺位置的地理中心。中心点被视为该用户的居所。
+\end{defn}
 
-\subsection{准备工作}
-\label{sec:requirements}
+图~\ref{fig:radius}是半径特征的示例，图中标有REVIEW LOCATION的点是一个用户写过评论的各个店铺的位置，标有CENTER的点便是这些店铺位置的地理中心。我们认为这个点便是该用户平时居住的地方。图中连接CENTER点和各个REVIEW LOCATION点的线代表了这些点的间隔距离，也就是每个店铺对应半径特征的值。
 
-要使用这个模板撰写学位论文，需要在\emph{TeX系统}、\emph{TeX技能}上有所准备。
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[htbp]{0.6\textwidth}
+		\centering
+		\includegraphics[width=10cm]{featu-1.png}
+		\caption[地理位置特征“半径”示意图]
+		{地理位置特征“半径”示意图（图源：谷歌地图）\label{fig:radius}}		
+	\end{minipage}     
+\end{figure}
 
-\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-	\item {\TeX}系统：所使用的{\TeX}系统要支持 \XeTeX 引擎，且带有ctex 2.x宏包，以2015年的\emph{完整}TeXLive、MacTeX发行版为佳。
-	\item TeX技能：尽管提供了对模板的必要说明，但这不是一份“ \LaTeX 入门文档”。在使用前请先通读其他入门文档。
-	\item 针对Windows用户的额外需求：学位论文模本分别使用git和GNUMake进行版本控制和构建，建议从Cygwin\footnote{\url{http://cygwin.com}}安装这两个工具。
-\end{itemize}
 
-\subsection{模板选项}
-\label{sec:thesisoption}
 
-sjtuthesis提供了一些常用选项，在thesis.tex在导入sjtuthesis模板类时，可以组合使用。
-这些选项包括：
+\section{半径特征的合理性论述}
 
-\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-	\item 学位类型：bachelor(学位)、master(硕士)、doctor(博士)，是必选项。
-	\item 中文字体：fandol(Fandol 开源字体)、windows(Windows 系统下的中文字体)、mac(macOS 系统下的华文字体)、ubuntu(Ubuntu 系统下的文泉驿和文鼎字体)、adobe(Adobe 公司的中文字体)、founder(方正公司的中文字体)，默认根据操作系统自动配置。
-	\item 英文模版：使用english选项启用英文模版。
-	\item 盲审选项：使用review选项后，论文作者、学号、导师姓名、致谢、发表论文和参与项目将被隐去。
-\end{itemize}
+表~\ref{tbl:radius}和图~\ref{fig:hist}展示了半径特征的统计数据和频率分布直方图。计算数据来源于我们使用的数据集。统计数据中的平均值和标准差表现了半径特征在两类用户之间的差异。频率分布直方图更加具体地展示了水军用户(Spammer)和普通用户(Non-spammer)的差异，包括图像各位置的斜率、各顶点位置等。但是二者的图像也有相似的部分，那就是它们都呈现出了双峰分布的趋势。而这种双峰图像的形成过程可以看做是两个参数不同的高斯分布(Gaussian Distribution)在对数横坐标轴上的叠加。
 
-\subsection{编译模板}
-\label{sec:process}
+\begin{table}[htbp]
+	\caption{半径特征的统计数据}
+	\label{tbl:radius}
+	\centering
+	\begin{tabular}{ccc}
+		\toprule
+		& 平均值 & 标准差  \\
+		\midrule
+		水军用户      & 310.0604  & 678.4959  \\
+		普通用户  & 568.5133  &	999.4281 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
-模板默认使用GNUMake构建，GNUMake将调用latemk工具自动完成模板多轮编译：
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[htbp]{0.6\textwidth}
+		\centering
+		\includegraphics[width=10cm]{featu-2.png}
+		\caption[半径特征的频率分布图]
+		{半径特征的频率分布图\label{fig:hist}}		
+	\end{minipage}     
+\end{figure}
 
-\begin{lstlisting}[basicstyle=\small\ttfamily, caption={编译模板}, numbers=none]
-make clean thesis.pdf
-\end{lstlisting}
+从水军用户和普通用户的行为上分析，这种双峰分布是合理的。总体来看，人类的活动范围可以分为两个模式：近距离活动和远距离活动。近距离活动就是人类在居所的附近活动，这类活动占比最高，活动范围不会很远，通常在一个城市的范围之内；远距离活动一般出现在一个人离开居所很长时间的时候，例如旅游、出差等，这类活动的地理位置跨越范围较大，但持续时间不会太长。故普通用户图像中的双峰是近距离活动和远距离活动的合理体现。然而，水军用户并不符合近距离活动和远距离活动的模式，他们的行动模式是无规律的，水军用户的双峰图像只是其进行水军活动时不同半径的店铺数量占比的体现。此外，普通用户和水军用户在评论店铺的半径特征顺序上也是有差异的。普通用户评论过的店铺中，连续的店铺的半径特征值基本上是相近的。换句话说，普通用户在店铺的选择上具有空间连续性。这是因为人类的行动是具有空间连续性的，人们在一段时间内是在同一片区域生活的，所以人类日常消费的场所是接近的。即使短时间内出远门旅行，在旅行中的消费场所也是接近的。反观水军用户，其评论店铺的顺序是由雇主要求决定的而非人类正常活动，所以他们的半径特征不具有空间连续性。这两点关键差异将是SpamTracer模型进行水军检测的重要依据。
 
-若需要生成包含“原创性声明扫描件”的学位论文文档，请将扫描件保存为statement.pdf，然后调用make生成submit.pdf。
+接下来对半径特征进行数学角度的建模。如上文所提到的，我们用两个参数不同的高斯分布的叠加来描述半径特征的频率分布。假设$x_i, i = 1,...,T$是一个用户的评论列表中按时间排序出现的店铺位置，根据公式~\eqref{equation:1}，我们计算其地理中心$C$，然后计算每一个评论的店铺所对应的半径特征值$\gamma_{x_i}$。半径特征值$\gamma_{x_i}$遵循高斯分布。
 
-\begin{lstlisting}[basicstyle=\small\ttfamily, caption={生成用于提交的学位论文}, numbers=none]
-make clean submit.pdf
-\end{lstlisting}
 
-编译失败时，可以尝试手动逐次编译，定位故障。
-
-\begin{lstlisting}[basicstyle=\small\ttfamily, caption={手动逐次编译}, numbers=none]
-xelatex -no-pdf thesis
-biber --debug thesis
-xelatex thesis
-xelatex thesis
-\end{lstlisting}
-
-\subsection{模板文件布局}
-\label{sec:layout}
-
-\begin{lstlisting}[basicstyle=\small\ttfamily,caption={模板文件布局},label=layout,float,numbers=none]
-├── LICENSE
-├── Makefile
-├── README.md
-├── bib
-│   ├── chap1.bib
-│   └── chap2.bib
-├── bst
-│   └── GBT7714-2005NLang.bst
-├── figure
-│   ├── chap2
-│   │   ├── sjtulogo.eps
-│   │   ├── sjtulogo.jpg
-│   │   ├── sjtulogo.pdf
-│   │   └── sjtulogo.png
-│   └── sjtubanner.png
-├── sjtuthesis.cfg
-├── sjtuthesis.cls
-├── statement.pdf
-├── submit.pdf
-├── tex
-│   ├── abstract.tex
-│   ├── ack.tex
-│   ├── app_cjk.tex
-│   ├── app_eq.tex
-│   ├── app_log.tex
-│   ├── chapter01.tex
-│   ├── chapter02.tex
-│   ├── chapter03.tex
-│   ├── conclusion.tex
-│   ├── id.tex
-│   ├── patents.tex
-│   ├── projects.tex
-│   ├── pub.tex
-│   └── symbol.tex
-└── thesis.tex
-\end{lstlisting}
-
-本节介绍学位论文模板中木要文件和目录的功能。
-
-\subsubsection{格式控制文件}
-\label{sec:format}
-
-格式控制文件控制着论文的表现形式，包括以下几个文件：
-sjtuthesis.cfg, sjtuthesis.cls和GBT7714-2005NLang.bst。
-其中，“cfg”和“cls”控制论文主体格式，“bst”控制参考文献条目的格式，
-
-\subsubsection{主控文件thesis.tex}
-\label{sec:thesistex}
-
-主控文件thesis.tex的作用就是将你分散在多个文件中的内容“整合”成一篇完整的论文。
-使用这个模板撰写学位论文时，你的学位论文内容和素材会被“拆散”到各个文件中：
-譬如各章正文、各个附录、各章参考文献等等。
-在thesis.tex中通过“include”命令将论文的各个部分包含进来，从而形成一篇结构完成的论文。
-对模板定制时引入的宏包，建议放在导言区。
-
-\subsubsection{各章源文件tex}
-\label{sec:thesisbody}
-
-这一部分是论文的主体，是以“章”为单位划分的，包括：
-
-\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-	\item 中英文摘要(abstract.tex)。前言(frontmatter)的其他部分，中英文封面、原创性声明、授权信息在sjtuthesis.cls中定义，不单独分离为tex文件。
-不单独弄成文件。
-	\item 正文(mainmatter)——学位论文正文的各章内容，源文件是chapter\emph{xxx}.tex。
-	\item 附录(app\emph{xx}.tex)、致谢(thuanks.tex)、攻读学位论文期间发表的学术论文目录(pub.tex)、个人简历(resume.tex)组成正文后的部分(backmatter)。
-参考文献列表由bibtex插入，不作为一个单独的文件。
-\end{itemize}
-
-\subsubsection{图片文件夹figure}
-\label{sec:fig}
-
-figure文件夹放置了需要插入文档中的图片文件(支持PNG/JPG/PDF/EPS格式的图片)，可以在按照章节划分子目录。
-模板文件中使用\verb|\graphicspath|命令定义了图片存储的顶层目录，在插入图片时，顶层目录名“figure”可省略。
-
-\subsubsection{参考文献数据库bib}
-\label{sec:bib}
-
-目前参考文件数据库目录只存放一个参考文件数据库thesis.bib。
-关于参考文献引用，可参考第\ref{chap:example}章中的例子。
-
+\begin{equation}
+\label{equation:1}
+\begin{aligned}
+& C = (\frac{\sum_{t \in T}{x_t.latitude}}{|T|}, \frac{\sum_{t \in T}{x_t.longitude}}{|T|})\\
+& \gamma_{x_i} = Distance(x_i, C)\\
+& f(x;\mu, \sigma) = \frac{1}{\sqrt{2\pi}\sigma}\exp{(-\frac{(x-\mu)^2}{2\sigma^2})} \qquad
+\gamma_{x}\sim N(\mu, \sigma^2) \\
+\end{aligned}
+\end{equation}
