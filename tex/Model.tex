@@ -14,9 +14,9 @@
 
 \begin{figure}[htbp]
 	\centering
-	\begin{minipage}[htbp]{0.6\textwidth}
+	\begin{minipage}[htbp]{\textwidth}
 		\centering
-		\includegraphics[width=10cm]{model-1.jpg}
+		\includegraphics[width=16cm]{model-1.jpg}
 		\caption[水军检测流程图]
 		{水军检测流程图\label{fig:structure}}		
 	\end{minipage}     
@@ -93,7 +93,12 @@ N(\mu_1, \sigma_1^2)     &     Y_i = 1	\\
 
 \begin{equation}
 \label{equation:6}
-b_j(X_i) = b_j(\gamma_{x_i}) = P(\gamma_{x_i} | Y_i = j) = f(\gamma_{x_i};\mu_j, \sigma_j) \quad j \in \{0,1\}
+\begin{aligned}	
+&b_j(\Delta{x_i})\\
+= &P(\Delta{x_i} | Y_i = j)\\
+= &f(\Delta{x_i};\mu_j, \sigma_j) \\
+= &\frac{1}{\sqrt{2\pi}\sigma_j}\exp{(-\frac{(\Delta{x_i}-\mu_j)^2}{2\sigma_j^2})}, j \in \{0,1,2\}\\
+\end{aligned}
 \end{equation}
 
 综上，我们论述了每个子链$\lambda$及其各自参数$\{\mathbf{A}, \mathbf{B}, \mathbf{\pi}\}$的计算过程，以及如何适配半径特征$\gamma_{x_i}$的分布情况。接下来我们开始计算生成特征序列的生成概率。如果用$X_{1:T}$代表从$x_1$到$x_T$的观测态序列，$Y_{1:T}$代表从$x_1$到$x_T$的隐藏态序列，则公式~\eqref{equation:7}可以计算$X_{1:T}$和$Y_{1:T}$的联合概率。概率$P(X_{1:T}, Y_{1:T})$的含义是$X_{1:T}$和$Y_{1:T}$都按照顺序出现在第$1$到第$T$个位置上的概率。这个计算过程的时间复杂度是$O(T)$。
