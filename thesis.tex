@@ -5,7 +5,7 @@
 
 % 双面打印
 %\documentclass[doctor, openright, twoside]{sjtuthesis}
-\documentclass[bachelor, fontset=adobe,  openany, oneside, submit]{sjtuthesis}
+\documentclass[bachelor, fontset=fandol,  openany, oneside, submit]{sjtuthesis}
 % \documentclass[master, review]{sjtuthesis}
 % \documentclass[%
 %   bachelor|master|doctor,	% 必选项
@@ -79,8 +79,8 @@
 \include{tex/Concl}
 
 %\include{tex/example}
-\include{tex/faq}
-\include{tex/summary}
+%\include{tex/faq}
+%\include{tex/summary}
 
 
 \appendix	% 使用英文字母对附录编号，重新定义附录中的公式、图图表编号样式
@@ -91,10 +91,10 @@
 \renewcommand\thelstlisting{\Alph{chapter}--\arabic{lstlisting}}
 
 %% 附录内容，本科学位论文可以用翻译的文献替代。
-\include{tex/app_setup}
-\include{tex/app_eq}
-\include{tex/app_cjk}
-\include{tex/app_log}
+%\include{tex/app_setup}
+%\include{tex/app_eq}
+%\include{tex/app_cjk}
+%\include{tex/app_log}
 
 \backmatter	% 文后无编号部分 
 
