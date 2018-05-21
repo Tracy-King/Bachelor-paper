@@ -361,7 +361,7 @@
   \cleardoublepage
   \thispagestyle{empty}
   \begin{center}
-  {\songti\zihao{-3}\sjtu@label@statement}
+  {\heiti\zihao{-3}\sjtu@label@statement}
   \vskip\stretch{1}
   {\heiti\zihao{3}\sjtu@value@chinesetitle}
   \vskip\stretch{1}

@@ -23,8 +23,9 @@
 
 \usepackage[linesnumbered, boxed, ruled, commentsnumbered,algo2e]{algorithm2e}
 
-\CTEXsetup[indent={2em}]{subsection}
-\CTEXsetup[indent={2em}]{section}
+\CTEXsetup[format+={\heiti}]{chapter}
+\CTEXsetup[indent={2em}, format+={\heiti}]{subsection}
+\CTEXsetup[indent={2em}, format+={\heiti}]{section}
 
 \begin{document}
 
@@ -33,19 +34,19 @@
 \maketitle
 
 \makeatletter
-\ifsjtu@submit\relax
-	\includepdf{pdf/original.pdf}
-	\cleardoublepage
-	\includepdf{pdf/authorization.pdf}
-	\cleardoublepage
-\else
-\ifsjtu@review\relax
+%\ifsjtu@submit\relax
+%	\includepdf{pdf/original.pdf}
+%	\cleardoublepage
+%	\includepdf{pdf/authorization.pdf}
+%	\cleardoublepage
+%\else
+%\ifsjtu@review\relax
 %exclude the original claim and authorization
-\else
-	\makeDeclareOriginal
-	\makeDeclareAuthorization
-\fi
-\fi
+%\else
+%	\makeDeclareOriginal
+%	\makeDeclareAuthorization
+%\fi
+%\fi
 \makeatother
 
 
@@ -57,14 +58,14 @@
 
 %% 目录、插图目录、表格目录
 \tableofcontents
-\listoffigures
-\addcontentsline{toc}{chapter}{\listfigurename} %将插图目录加入全文目录
-\listoftables
-\addcontentsline{toc}{chapter}{\listtablename}  %将表格目录加入全文目录
-\listofalgorithms
-\addcontentsline{toc}{chapter}{\listalgorithmname} %将算法目录加入全文目录
+%\listoffigures
+%\addcontentsline{toc}{chapter}{\listfigurename} %将插图目录加入全文目录
+%\listoftables
+%\addcontentsline{toc}{chapter}{\listtablename}  %将表格目录加入全文目录
+%\listofalgorithms
+%\addcontentsline{toc}{chapter}{\listalgorithmname} %将算法目录加入全文目录
 
-\include{tex/symbol} % 主要符号、缩略词对照表
+%\include{tex/symbol} % 主要符号、缩略词对照表
 
 \mainmatter	% 使用阿拉伯数字对正文编号
 
